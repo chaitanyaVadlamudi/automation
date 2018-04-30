@@ -2,7 +2,8 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
 import { TreeDragDropService } from 'primeng/primeng';
 import { ISlimScrollOptions, SlimScrollEvent } from 'ngx-slimscroll';
 import { Router } from '@angular/router';
-import { TreeNode } from 'primeng/primeng'
+import { TreeNode } from 'primeng/primeng';
+import { ServiceRequest } from './services/base.http.service';
 
 
 @Component({
@@ -19,9 +20,17 @@ export class AppComponent implements OnInit {
   gaugeValue = 133;
   gaugeLabel = "Active";
   gaugeAppendText = "/183";
-  constructor(private router: Router) { }
+  constructor(private router: Router, private ReqSvc: ServiceRequest) { }
+  testSvc() {
+    this.ReqSvc.testGetMethod().subscribe(data => {
+      console.log('test', data);
+    },
+      (err) => {
+        console.log('error', err)
+      });
+  }
   ngOnInit() {
-
+    this.testSvc();
     this.scrollEvents = new EventEmitter<SlimScrollEvent>();
     this.opts = {
       position: "right",
@@ -38,7 +47,6 @@ export class AppComponent implements OnInit {
       alwaysVisible: false,
       visibleTimeout: 1000
     }
-
 
     this.nodes = [{
       "label": "Location 1",

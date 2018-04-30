@@ -7,7 +7,8 @@ import { AmChartsModule } from "@amcharts/amcharts3-angular";
 import { FormsModule } from '@angular/forms';
 import { TabsModule } from 'ngx-bootstrap';
 import { AngularEchartsModule } from 'ngx-echarts';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -16,7 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
 import { DeviceDetailsComponent } from './device-details/device-details.component';
 
-
+import {ServiceRequest} from './services/base.http.service';
 
 @NgModule({
   declarations: [
@@ -34,9 +35,11 @@ import { DeviceDetailsComponent } from './device-details/device-details.componen
     NgxGaugeModule,
     routing,
     AmChartsModule,
-    AngularEchartsModule
+    AngularEchartsModule,
+    HttpClientModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [ServiceRequest],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
