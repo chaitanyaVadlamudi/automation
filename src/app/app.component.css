@@ -1,0 +1,53 @@
+/deep/ ul.ui-tree-container {
+  padding-left: 0px;
+}
+
+.avgData {
+  font-family: 'Exo', sans-serif;
+  padding: 5px;
+  min-height: 88px;
+}
+
+.avgData h2 {
+  float: right;
+}
+
+.avgData h3 {
+  font-weight: 400;
+}
+
+.m-t {
+  margin-top: 12px;
+}
+
+.m-l {
+  margin-left: 33px;
+}
+
+.gauge {
+  text-align: center;
+}
+
+.avgData h4 {
+  text-align: start;
+}
+
+footer {
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .3);
+  text-align: center;
+  height: 30px;
+}
+
+.type {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 4.2;
+}
+
+.value {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}

@@ -1,0 +1,19 @@
+.nav-shadow {
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .3);
+}
+
+.nav-border-bottom {
+  border-bottom: 1px solid #dddfe2;
+}
+
+.logo {
+  height: 32px;
+}
+
+.notification-badge {
+  border-radius: 50px;
+  /*position: absolute;  Position the badge within the relatively positioned button */
+  position: relative;
+  top: -12px;
+  right: 12px;
+}

@@ -1,0 +1,74 @@
+.customCard {
+  min-height: 336px;
+}
+
+@media(min-width:768px) {
+  .col-md-5 {
+    max-width: 37.3%;
+  }
+}
+
+.card h4 {
+  font-family: 'Exo', sans-serif;
+  padding: 20px;
+}
+
+.gauge {
+  margin: 5px 5px 5px 5px;
+}
+
+.tab-container li.nav-item {
+  width: 33.33%;
+}
+
+.tab-container .nav-tabs .nav-link,
+.nav-tabs .nav-item.show .nav-link {
+  color: #B7BCC3;
+  text-align: center;
+  border: none;
+  padding: 20px;
+  font-family: 'Exo', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.tab-container .nav-tabs a.active {
+  color: black;
+  border-bottom: 5px solid #40DC7E;
+  border-radius: 3px;
+}
+
+.nav-tabs {
+  border: none;
+}
+
+/* lights css */
+
+.lights {
+  padding-left: 20px;
+}
+
+.green {
+  background: green;
+  background-size: 5px 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: dotted 2px lime;
+  background-image: radial-gradient(lime, transparent);
+  box-shadow: 0 0 20px #111 inset, 0 0 10px lime;
+  float: left;
+}
+
+.red {
+  background: red;
+  background-size: 5px 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: dotted 2px red;
+  background-image: radial-gradient(brown, transparent);
+  box-shadow: 0 0 20px #111 inset, 0 0 10px red;
+  float: left;
+  margin-left: 20px;
+}

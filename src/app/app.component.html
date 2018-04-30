@@ -1,0 +1,74 @@
+<app-header>
+</app-header>
+<div class="mt-2">
+  <main>
+
+    <div class="pt-5">
+      <div class="container-fluid" style="margin-top: 20px;">
+
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <!-- routing -->
+
+            <div class="card">
+              <div class="card-body pt-2 pl-2 pr-2 pb-1">
+                <div class="container-fluid mt-0 p-0">
+                  <div class="row pl-2 pr-2">
+                    <div class="col-md-3 border border-top-0 border-bottom-0 border-left-0">
+                      <div class="scroll-window" slimScroll [options]="options" [scrollEvents]="scrollEvents" style="height:300px;">
+                        <p-tree [value]="nodes" [loading]="loading" (onNodeSelect)="nodeSelect($event)" selectionMode="single" [(selection)]="selectedFile"
+                          (onNodeUnselect)="nodeUnselect($event)">
+
+                        </p-tree>
+
+                      </div>
+                      <div class="card m-t">
+                        <div class="avgData">
+                          <span class="type">Average Current:</span>
+                          <span class="text-muted value m-l">298</span>
+                          <span class="text-muted"> A</span>
+
+                        </div>
+                      </div>
+                      <div class="card m-t">
+                        <div class="avgData">
+                          <span class="type">Average Voltage:</span>
+                          <span class="text-muted value m-l">240</span>
+                          <span class="text-muted"> V</span>
+                        </div>
+                      </div>
+                      <div class="card m-t">
+                        <div class="avgData">
+                          <span class="type">Average Temperature:</span>
+                          <span class="text-muted value">310&deg;</span>
+                          <span class="text-muted"> C</span>
+
+                        </div>
+                      </div>
+                      <div class="card m-t  gauge">
+                        <div class="avgData">
+                          <h5>Active Sensors</h5>
+                          <ngx-gauge [type]="gaugeType" [value]="gaugeValue" [label]="gaugeLabel" [append]="gaugeAppendText" [size]="150" [thick]="15"
+                            foregroundColor="#00FA89" backgroundColor="#E04048" max="183">
+                          </ngx-gauge>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-9">
+                      <router-outlet></router-outlet>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="footer fixed-bottom bg-white">
+  <p>Copyright &copy;
+    <b>LivNsense 2018</b> All Rights Reserved.
+  </p>
+</footer>

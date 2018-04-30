@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="card customCard">
+      <h4>Status</h4>
+      <div class="lights">
+        <span class="green" [ngStyle]="{'opacity':status==true?'1':'.2'}"></span>
+        <span class="red" [ngStyle]="{'opacity':status==false?'1':'.2'}"></span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="card">
+      <!-- <h4>Current</h4>
+      <div id="ampGauge" class="gauge" [style.width.%]="100" [style.height.px]="250"></div> -->
+      <tabset>
+        <tab>
+          <ng-template tabHeading>
+            <b>Current</b>
+          </ng-template>
+          <div id="ampGauge" class="gauge" [style.width.%]="100" [style.height.px]="250"></div>
+        </tab>
+        <tab>
+          <ng-template tabHeading>
+            <b>Power</b>
+          </ng-template>
+          <div id="wattGauge" class="gauge" [style.width.%]="100" [style.height.px]="250"></div>
+        </tab>
+        <tab>
+          <ng-template tabHeading>
+            <b>Voltage</b>
+          </ng-template>
+          <div id="voltGauge" class="gauge" [style.width.%]="100" [style.height.px]="250"></div>
+        </tab>
+      </tabset>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="card customCard">
+      <h4>Voltage</h4>
+      <!-- <div id="voltGauge" class="gauge" [style.width.%]="100" [style.height.px]="250"></div> -->
+    </div>
+  </div>
+</div>
+<div class="row" style="margin-top: 15px;">
+  <div class="col-md-12">
+    <div class="card">
+      <div id="reportContainer" style="height:500px;width:100%"></div>
+    </div>
+  </div>
+</div>
